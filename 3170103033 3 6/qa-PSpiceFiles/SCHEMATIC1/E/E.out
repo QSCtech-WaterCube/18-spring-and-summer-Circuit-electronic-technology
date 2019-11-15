@@ -1,0 +1,42 @@
+
+**** 03/05/19 14:29:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-E"  [ D:\3170104305\qa-PSpiceFiles\SCHEMATIC1\E.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "E.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 -200 40 0.1 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source QA
+R_R1         N00301 N00149 1k
+V_V1         N00301 0  AC <AC>
+---------------------------$
+ERROR(ORPSIM-16492): Missing value
++SIN 0 5 1000 0 0 0
+D_D1         N00149 0 D1N4001 
+
+**** RESUMING E.cir ****
+.END
+
